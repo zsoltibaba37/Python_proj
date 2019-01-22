@@ -1,6 +1,8 @@
 #!/usr/local/bin/python3.7
 # -*- coding: UTF-8 -*-
 
+# Ebböl lehet function-t csinálni.
+
 i = 0
 y = 5
 ss = ":("

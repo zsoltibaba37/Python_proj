@@ -2,6 +2,8 @@
 # -*- coding: UTF-8 -
 
 # A lemeztábla sulyát kiszámolja.
+# Készítette: Pető Zsolt
+# Dátum: 2019
 
 hossz = {'1':2000, '2':2500, '3':3000} # Dict 1
 szel = {'1':1000, '2':1250, '3':1500}  # Dict 2
