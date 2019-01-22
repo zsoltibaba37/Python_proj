@@ -53,9 +53,3 @@ print(tabl.center(80))
 print(ered.center(80))
 print("-"*80)
 
-
-
-
-
-
-
