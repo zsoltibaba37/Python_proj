@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.7
 # -*- coding: UTF-8 -*-
 
 import array as arr
@@ -51,7 +51,7 @@ print("Type of tup3[0]: ",type(tup3[0]),"\nType of tup3[2]: ",type(tup3[2]))
 #---------------------------------------------------------
 print("")
 print("*"*80)
-print("Dictionari:")
+print("Dictionary:")
 
 dict1 = {'Name': 'Milan', 'Age': 10, 'School': 'Pattantyus'}
 
