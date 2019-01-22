@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3.7
+#!/usr/bin/env python3.7
 # -*- coding: UTF-8 -*-
 
 # Ebböl lehet function-t csinálni.
