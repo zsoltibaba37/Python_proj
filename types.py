@@ -9,7 +9,7 @@ from math import pi
 #---------------------------------------------------------
 print("")
 print("*"*80)
-print("Numer:")
+print("Number:")
 
 szam1 = 10
 szam2 = 20
@@ -46,7 +46,7 @@ print(tup1)
 print(tup2[-1])
 print(tup3)
 print(tup3[0], tup3[2])
-print("Type of tup3[0]: ",type(tup3[0]),"\nType of tup3[2]: ",type(tup3[2]))
+print("Type of tup3[0]: ", type(tup3[0]), "\nType of tup3[2]: ", type(tup3[2]))
 
 #---------------------------------------------------------
 print("")
@@ -70,8 +70,8 @@ print("*"*80)
 print("List:")
 
 list1 = ['apple', 'orange', 'banana', 'pineapple']
-list2 = [1,2,3,4,5]
-list3 = [1,2,'apple','orange']
+list2 = [1, 2, 3, 4, 5]
+list3 = [1, 2, 'apple', 'orange']
 
 print(list1)
 print(list2)
@@ -125,7 +125,7 @@ print("Array:")
 array1 = arr.array('d', [1, 3.2, 35, pi])
 
 print("")
-print (array1)
+print(array1)
 print("")
 
 print("array1[0]: ", array1[0])
@@ -144,7 +144,7 @@ print("array1[3]: ", array1[3])
 print("type of array1[3]: ", type(array1[3]))
 
 print("")
-print("The value of PI from array1: %.5f"% array1[3])
+print("The value of PI from array1: %.5f" % array1[3])
 
 print("")
 print("*"*80)
