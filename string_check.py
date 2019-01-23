@@ -61,8 +61,8 @@ elif age < young_ppl:
 
 
 print("What is your favorite color")
-szin = string_check()
+colo = string_check()
 
 
-print("\nYour name is: " + str(name),"\nYour age is: " + str(age),"\nYour favorite color is: " + str(szin))
+print("\nYour name is: " + str(name),"\nYour age is: " + str(age),"\nYour favorite color is: " + str(colo))
 print("\nBye. Bye.\n")
