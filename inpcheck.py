@@ -61,3 +61,29 @@ def range_check(a,b):
             print ("This is not a number, or not an integer value!")
             y = 0
     return i
+
+def float_check():
+    """
+    Check the input field.
+    Return only float number.
+    """
+    y = False
+    while y != True:
+        f = input("?>: ")
+        if len(f) == 0:
+            print("This is something else.")
+            y = False
+        else:
+            print("This is", end=" ")
+            try:
+                int(f)
+                print("Integer.")
+                y = False
+            except:
+                try:
+                    float(f)
+                    y = True
+                except:
+                    print("String.")
+
+    return f
