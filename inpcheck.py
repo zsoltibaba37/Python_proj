@@ -39,3 +39,25 @@ def string_check():
         s = input(">?: ")
         y = str.isalpha(s)
     return s
+
+def range_check(a,b):
+    """
+    Checks your choice between two numbers.
+    Usage:
+    range_check(1,10)
+    Return rating value.
+    """
+    y = 0
+    while y != 1:
+        try:
+            i = int(input("?>: "))
+            if i in range(a,b+1):
+               y = 1
+               pass
+            else:
+               print("The number is in out of range!")
+               y = 0
+        except ValueError:
+            print ("This is not a number, or not an integer value!")
+            y = 0
+    return i
