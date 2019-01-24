@@ -71,19 +71,18 @@ def float_check():
     while y != True:
         f = input("?>: ")
         if len(f) == 0:
-            print("This is something else.")
+            print("Write something!")
             y = False
         else:
-            print("This is", end=" ")
+            pass
             try:
                 int(f)
-                print("Integer.")
                 y = False
             except:
                 try:
                     float(f)
                     y = True
                 except:
-                    print("String.")
+                    pass
 
     return f
