@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
 
-import codecs
-import sys
+__author__ = "Zsolt Pető"
+__version__ = "0.1"
+
+import codecs, sys
 
 def line():
     print("")
@@ -11,51 +13,79 @@ def fline():
     print("#" * 80)
 
 subjects = (
-    "Matek",
+    "Angol nyelv",
+    "Erkölcstan",
+    "Ének-zene",
+    "Informatika",
     "Irodalom",
+    "Környezetismeret",
     "Magyar",
-    "Környezet",
+    "Matematika",
+    "Technika",
     "Testnevelés",
+    "Vizuális kultúra"
 )
-line()
-fline()
-t = len(subjects)               # The number of subjects
+
 ################################################################################
-# Read how many lines in the file
+#
+# The number of subjects
+#
+################################################################################
+t = len(subjects)
+
+################################################################################
+#
+# Read how many lines in the grades.txt file.
+#
+################################################################################
 f_lines = len(codecs.open('grades.txt', 'r', 'UTF-8').readlines( ))
+
 ################################################################################
-# Check the grades.txt line numbers
+#
+# Compare the grades.txt with the subjects
+#
+################################################################################
 if t != f_lines:
+    line()
+    fline()
     print("A grades.txt-ben az adatok nem jók!")
     print("Tantárgyak száma:", t)
     print("A grades.txt-ne lévő sorok száma:", f_lines)
     print("Javítsd ki a TXT fájlt és indítsd újra a programot.")
     print("Viszlát.")
+    line()
+    fline()
     sys.exit()
 else:
     pass
+
 ################################################################################
+#
 # Read file and write to grades variable. Line by line
+#
+################################################################################
 with codecs.open('grades.txt', 'r', 'UTF-8') as g:
-    grades = []
+    grades = []                 # Make list from file
     for i in g:
         grades.append(i)
 
 ################################################################################
-# Convert the grades strings to integer
-#   --  All  --
-z = 0
+#
+#   Print out averages
+#
+################################################################################
+line()
+fline()
 for z in range(0, t):
-    len_matek = len(grades[z])
-    j_matek = len_matek // 2  # The real numbers of subject
-    matek = grades[z]
-    smatek = 0
-    for y in range(0, len_matek, 2):
-        smatek = smatek + int(matek[y])         # Sum of subject grades
-    a_matek = smatek/j_matek                    # subject average calculation
+    len_rating = len(grades[z]) # One line how many character contain
+    r_rating = len_rating // 2  # The real numbers of ratings
+    subj = grades[z]
+    s_rating = 0
+    for y in range(0, len_rating, 2):
+        s_rating = s_rating + int(subj[y])         # Sum of subject grades
+    a_rating = s_rating/r_rating                   # rating average calculation [sum of ratings / number off ratings]
     line()
-    print(" A", subjects[z], "átlagod: %.2f"% a_matek)
-    line()
-    fline()
+    print(" A(z)", subjects[z], "átlagod: %.2f"% a_rating)
 
-
+line()
+fline()
