@@ -4,7 +4,8 @@
 __author__ = "Zsolt Pető"
 __version__ = "0.1"
 
-import codecs, sys
+import codecs
+import sys
 
 def line():
     print("")
