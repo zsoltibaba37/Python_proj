@@ -3,7 +3,7 @@
 
 __author__ = "Zsolt Pető"
 __license__ = "MIT"
-__version__ = "0.1"
+__version__ = "0.2"
 
 import codecs
 import time
@@ -73,15 +73,25 @@ with codecs.open('orban.txt', 'r', 'UTF-8') as o:
 
 
 fulline()
+line()
 print("Ez a kis program a magam szórakoztatására készült.")
-
-
-print("Válassz egy évszámot a felsorolásból +[ENTER] és utazz vissza az időben. Pl.: 2 <enter>")
+line()
+print("A lenti idézetek Orbán Viktor-tól származnak,")
+print("és a 'https://hu.wikiquote.org/wiki/Orb%C3%A1n_Viktor' oldalról lettek összegyűjve.\n")
+fulline()
+idezet = "'A zsigerekig ható gyűlölet olyannyira központi lehet egy ember életében, hogy egész élete értelmét vesztené, ha gyűlölete tárgya megsemmisülne.'" # A társadalom fogaskerekei. Magyarázó mechanizmusok a társadalomtudományokban - Jon Elster (2001)
+line()
+print(textwrap.fill(idezet, 80), "\n       Jon Elster")
+line()
+fulline()
+line()
+print("Válassz a listából és utazz vissza az időben. (Pl.: 1 [Enter])")
+line()
 fulline()
 time.sleep(1)
 aa = 1
 for i in list:
-    print(aa,".", i)
+    print(aa,"-", i)
     aa += 1
 
 v = range_check(1,llist)
@@ -90,25 +100,33 @@ if v == 1:
     # 1989–1993: 1-11
     a = random.randint(1, 11)
     fulline()
+    line()
     print(textwrap.fill(orban[a], 80))
+    line()
     fulline()
 elif v == 2:
     # 1994–1998: 14-17
     b = random.randint(14, 17)
     fulline()
+    line()
     print(textwrap.fill(orban[b], 80))
+    line()
     fulline()
 elif v == 3:
     # 1998–2001: 20-28
     c = random.randint(20, 28)
     fulline()
+    line()
     print(textwrap.fill(orban[c], 80))
+    line()
     fulline()
 elif v == 4:
     # 2002–2005: 31-40
     d = random.randint(31, 40)
     fulline()
+    line()
     print(textwrap.fill(orban[d], 80))
+    line()
     fulline()
 else:
     # 2006-2018: 43-86
@@ -116,15 +134,3 @@ else:
     fulline()
     print(textwrap.fill(orban[e], 80))
     fulline()
-
-time.sleep(1)
-line()
-print("A lenti idézetek Orbán Viktor-tól származnak.")
-print("Az idézetek a:\n'https://hu.wikiquote.org/wiki/Orb%C3%A1n_Viktor' oldalról lettek összegyűjve.\n")
-line()
-fulline()
-idezet = "'A zsigerekig ható gyűlölet olyannyira központi lehet egy ember életében, hogy egész élete értelmét vesztené, ha gyűlölete tárgya megsemmisülne.'" # A társadalom fogaskerekei. Magyarázó mechanizmusok a társadalomtudományokban - Jon Elster (2001)
-line()
-print(textwrap.fill(idezet, 80), "\n Jon Elster")
-line()
-fulline()
