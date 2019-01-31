@@ -39,13 +39,15 @@ def range_check(a,b):
             y = 0
     return i
 
+
+# Hány sor van az orban.txt-ben
 file_lines = len(codecs.open('orban.txt', 'r', 'UTF-8').readlines( ))
 
 # Ellenőrzi az orban.txt fájlt. Ha üres a fájl, akkor kilép.
 if file_lines == 0:
     line()
     fulline()
-    print("Az orban.txt fájl üres. - 'Ha döglött lovon ülsz, szállj le róla!'")
+    print("Az orban.txt fájl üres!!!\nViszlát.")
     fulline()
     sys.exit(1)
 else:
@@ -60,16 +62,20 @@ list = [
     '2006-2018'
 ]
 
+# A 'list' hossza
 llist = len(list)
 
-# Az orban.txt beolvasása az orban listába.
+# Az orban.txt beolvasása az 'orban' listába.
 with codecs.open('orban.txt', 'r', 'UTF-8') as o:
     orban = []                 # Létrehozza az orban nevü listát, amiben az idézetek vannak
     for i in o:
         orban.append(i)
 
+
 fulline()
 print("Ez a kis program a magam szórakoztatására készült.")
+
+
 print("Válassz egy évszámot a felsorolásból +[ENTER] és utazz vissza az időben. Pl.: 2 <enter>")
 fulline()
 time.sleep(1)
@@ -113,14 +119,11 @@ else:
 
 time.sleep(1)
 line()
-print("A Fenti idézet Orbán Viktor-tól származik.")
-print("Az idézetek a:\n'https://hu.wikiquote.org/wiki/' oldalról lettek összegyűjve.\n")
-print("Mint fentebb írtam ez a program a magam szórakoztatására készült.\nNincs szándékomban gyűlöletet kelteni.")
+print("A lenti idézetek Orbán Viktor-tól származnak.")
+print("Az idézetek a:\n'https://hu.wikiquote.org/wiki/Orb%C3%A1n_Viktor' oldalról lettek összegyűjve.\n")
 line()
 fulline()
-
 idezet = "'A zsigerekig ható gyűlölet olyannyira központi lehet egy ember életében, hogy egész élete értelmét vesztené, ha gyűlölete tárgya megsemmisülne.'" # A társadalom fogaskerekei. Magyarázó mechanizmusok a társadalomtudományokban - Jon Elster (2001)
-
 line()
 print(textwrap.fill(idezet, 80), "\n Jon Elster")
 line()
