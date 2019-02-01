@@ -3,13 +3,23 @@
 
 __author__ = "Zsolt Pető"
 __license__ = "MIT"
-__version__ = "0.2"
+__version__ = "0.3"
 
 import codecs
-import time
-import sys
 import random
+import sys
 import textwrap
+import time
+from sys import platform
+import os
+
+# t = 10
+
+def torles():
+    if platform == "linux" or platform == "linux2":
+        os.system('clear')
+    elif platform == "win32":
+        os.system('cls')
 
 def line():
     print("")
@@ -17,17 +27,28 @@ def line():
 def fulline():
     print("#" * 80)
 
-def range_check(a,b):
+def outl():
+    line()
+    fulline()
+    line()
+    print("[CTRL-C]-re kilép a programból.".center(80))
+    line()
+    folyt = input("Nyomj egy [ENTER]-t a folytatáshoz".center(80))
+    torles()
+    return folyt
+
+def range_check(a,b,c):
     """
     Checks your choice between two numbers.
     Usage:
-    range_check(1,10)
+    range_check(1,10,question)
     Return rating value.
     """
     y = 0
     while y != 1:
         try:
-            i = int(input("?>: "))
+            i = int(input(c))
+#            i = int(input("?>: "))
             if i in range(a,b+1):
                y = 1
                pass
@@ -38,7 +59,6 @@ def range_check(a,b):
             print ("A beírt érték nem szám, vagy nem egész szám!")
             y = 0
     return i
-
 
 # Hány sor van az orban.txt-ben
 file_lines = len(codecs.open('orban.txt', 'r', 'UTF-8').readlines( ))
@@ -71,66 +91,72 @@ with codecs.open('orban.txt', 'r', 'UTF-8') as o:
     for i in o:
         orban.append(i)
 
-
+# Bevezető
 fulline()
 line()
 print("Ez a kis program a magam szórakoztatására készült.")
 line()
 print("A lenti idézetek Orbán Viktor-tól származnak,")
-print("és a 'https://hu.wikiquote.org/wiki/Orb%C3%A1n_Viktor' oldalról lettek összegyűjve.\n")
+print("és a 'https://hu.wikiquote.org/wiki/Orb%C3%A1n_Viktor' oldalról gyűjtöttem.\n")
 fulline()
 idezet = "'A zsigerekig ható gyűlölet olyannyira központi lehet egy ember életében, hogy egész élete értelmét vesztené, ha gyűlölete tárgya megsemmisülne.'" # A társadalom fogaskerekei. Magyarázó mechanizmusok a társadalomtudományokban - Jon Elster (2001)
 line()
 print(textwrap.fill(idezet, 80), "\n       Jon Elster")
-line()
-fulline()
-line()
-print("Válassz a listából és utazz vissza az időben. (Pl.: 1 [Enter])")
-line()
-fulline()
-time.sleep(1)
-aa = 1
-for i in list:
-    print(aa,"-", i)
-    aa += 1
 
-v = range_check(1,llist)
+# Loop
+try:
+    while True:
+        fulline()
+        line()
 
-if v == 1:
-    # 1989–1993: 1-11
-    a = random.randint(1, 11)
-    fulline()
-    line()
-    print(textwrap.fill(orban[a], 80))
-    line()
-    fulline()
-elif v == 2:
-    # 1994–1998: 14-17
-    b = random.randint(14, 17)
-    fulline()
-    line()
-    print(textwrap.fill(orban[b], 80))
-    line()
-    fulline()
-elif v == 3:
-    # 1998–2001: 20-28
-    c = random.randint(20, 28)
-    fulline()
-    line()
-    print(textwrap.fill(orban[c], 80))
-    line()
-    fulline()
-elif v == 4:
-    # 2002–2005: 31-40
-    d = random.randint(31, 40)
-    fulline()
-    line()
-    print(textwrap.fill(orban[d], 80))
-    line()
-    fulline()
-else:
-    # 2006-2018: 43-86
-    e = random.randint(43, 86)
-    fulline()
-    print(textwrap.fill(orban[e], 80))
-    fulline()
+        # Lista a választáshoz
+        aa = 1
+        for i in list:
+            print(aa, "-", i)
+            aa += 1
+
+        kerdes = "Válassz a listából és utazz vissza az időben. (Pl.: 1 [Enter]): "
+        line()
+        v = range_check(1, llist, kerdes)
+        line()
+
+        # Random idézet kiíratása
+        if v == 1:
+            # 1989–1993: 1-11
+            a = random.randint(1, 11)
+            fulline()
+            line()
+            print(textwrap.fill(orban[a], 80))
+            outl()
+        elif v == 2:
+            # 1994–1998: 14-17
+            b = random.randint(14, 17)
+            fulline()
+            line()
+            print(textwrap.fill(orban[b], 80))
+            outl()
+        elif v == 3:
+            # 1998–2001: 20-28
+            c = random.randint(20, 28)
+            fulline()
+            line()
+            print(textwrap.fill(orban[c], 80))
+            outl()
+        elif v == 4:
+            # 2002–2005: 31-40
+            d = random.randint(31, 40)
+            fulline()
+            line()
+            print(textwrap.fill(orban[d], 80))
+            outl()
+        else:
+            # 2006-2018: 43-86
+            e = random.randint(43, 86)
+            fulline()
+            line()
+            print(textwrap.fill(orban[e], 80))
+            outl()
+
+except KeyboardInterrupt:
+    print("")
+    sys.exit("\nViszlát\n")
