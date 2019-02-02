@@ -9,11 +9,9 @@ import codecs
 import random
 import sys
 import textwrap
-import time
 from sys import platform
 import os
 
-# t = 10
 
 def torles():
     if platform == "linux" or platform == "linux2":
@@ -33,9 +31,9 @@ def outl():
     line()
     print("[CTRL-C]-re kilép a programból.".center(80))
     line()
-    folyt = input("Nyomj egy [ENTER]-t a folytatáshoz".center(80))
+    input("Nyomj egy [ENTER]-t a folytatáshoz".center(80))
     torles()
-    return folyt
+    return
 
 def range_check(a,b,c):
     """
