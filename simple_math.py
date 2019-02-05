@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding:UTF-8 -*-
+
+
 from inpcheck import *
 
 import datetime
@@ -47,7 +51,7 @@ def main():
             print("The result: ", "%.2f"% d)
 
         print("#"*80)
-        time.sleep(5)
+        time.sleep(1)
         os.system('cls')
 
 if __name__ == "__main__":
