@@ -19,18 +19,18 @@ def main():
         print(today.center(80))
         print("#"*80)
 
-        print("Enter first number")
-        num1 = integer_check()
+
+        num1 = integer_check("Enter first number: ")
         print("#"*80)
 
-        print("Enter operator")
+
         op = "a"
         while op not in (ops):
-            op = name_check()
+            op = name_check("Enter operator: ")
         print("#"*80)
 
-        print("Enter second number")
-        num2 = integer_check()
+
+        num2 = integer_check("Enter second number: ")
         print("#"*80)
 
         if op == ops[0]:
@@ -53,6 +53,7 @@ def main():
         print("#"*80)
         time.sleep(1)
         os.system('cls')
+
 
 if __name__ == "__main__":
    try:
