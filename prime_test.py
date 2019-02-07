@@ -6,8 +6,8 @@ import time
 
 
 print("#"*80)
-print("Meddíg keresse a prímszámokat")
-b = inpcheck.integer_check()
+#print("Meddíg keresse a prímszámokat")
+b = inpcheck.integer_check("Meddíg keresse a prímszámokat: ")
 print("#"*80)
 
 primszamok = []
