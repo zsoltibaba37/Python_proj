@@ -100,7 +100,7 @@ fulline()
 idezet = "'A zsigerekig ható gyűlölet olyannyira központi lehet egy ember életében, hogy egész élete értelmét vesztené, ha gyűlölete tárgya megsemmisülne.'" # A társadalom fogaskerekei. Magyarázó mechanizmusok a társadalomtudományokban - Jon Elster (2001)
 line()
 print(textwrap.fill(idezet, 80), "\n       Jon Elster")
-
+line()
 # Loop
 try:
     while True:
