@@ -38,7 +38,7 @@ def outl():
 def range_check(a,b,c):
     """
     Checks your choice between two numbers.
-    Usage:
+    Example:
     range_check(1,10,question)
     Return rating value.
     """
@@ -46,7 +46,6 @@ def range_check(a,b,c):
     while y != 1:
         try:
             i = int(input(c))
-#            i = int(input("?>: "))
             if i in range(a,b+1):
                y = 1
                pass
