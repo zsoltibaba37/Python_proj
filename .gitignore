@@ -5,3 +5,4 @@ venv/
 .idea/
 .floo*
 __pycache__/
+html/
