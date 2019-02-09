@@ -4,3 +4,4 @@ venv/
 *.sh
 .idea/
 .floo*
+__pycache__/
