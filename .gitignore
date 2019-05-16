@@ -4,4 +4,9 @@ venv/
 *.sh
 .idea/
 .floo*
+<<<<<<< HEAD
 __pycache__
+=======
+__pycache__/
+html/
+>>>>>>> b39a59a6dcc4eb785a2fcb8ec4d41e86a5a04399
