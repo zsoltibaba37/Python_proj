@@ -100,6 +100,8 @@ idezet = "'A zsigerekig ható gyűlölet olyannyira központi lehet egy ember é
 line()
 print(textwrap.fill(idezet, 80), "\n       Jon Elster")
 line()
+# 
+kerdes = "Válassz a listából és utazz vissza az időben. (Pl.: 1 [Enter]): "
 # Loop
 try:
     while True:
@@ -111,8 +113,6 @@ try:
         for i in list:
             print(aa, "-", i)
             aa += 1
-
-        kerdes = "Válassz a listából és utazz vissza az időben. (Pl.: 1 [Enter]): "
         line()
         v = range_check(1, llist, kerdes)
         line()
