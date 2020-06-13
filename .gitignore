@@ -6,3 +6,4 @@ venv/
 .floo*
 __pycache__/
 html/
+test*.py
