@@ -48,8 +48,8 @@ if x > 1:
     # check for factors
     for i in range(2, x):
         if (x % i) == 0:
-#            print(x, "Ez nem prím szám.")
-#            print(i, "*", x // i, "=", x)
+            print(x, "Ez nem prím szám.")
+            print(i, "*", x // i, "=", x)
             break
     else:
         print(x, "Ez prímszám. Hurrá!!!")
@@ -64,7 +64,3 @@ e = end - start
 print("")
 print("A program %.2f" % e, "másodpecíg futott.")
 print("")
-
-
-
-
