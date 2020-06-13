@@ -13,6 +13,7 @@ def integer_check(question):
     i = int(i)
     return i
 
+
 def name_check(question):
     """
     Check the input field.
@@ -30,6 +31,7 @@ def name_check(question):
             break
     return s
 
+
 def string_check(question):
     """
     Check the input field.
@@ -46,7 +48,8 @@ def string_check(question):
         y = str.isalpha(s)
     return s
 
-def range_check(question,a,b):
+
+def range_check(question, a, b):
     """
     Checks your choice between two numbers.
     Returns the selected number.
@@ -57,16 +60,17 @@ def range_check(question,a,b):
     while y != 1:
         try:
             i = int(input(question))
-            if i in range(a,b+1):
-               y = 1
-               pass
+            if i in range(a, b + 1):
+                y = 1
+                pass
             else:
-               print("The number is in out of range!")
-               y = 0
+                print("The number is in out of range!")
+                y = 0
         except ValueError:
-            print ("This is not a number, or not an integer value!")
+            print("This is not a number, or not an integer value!")
             y = 0
     return i
+
 
 def float_check(question):
     """
