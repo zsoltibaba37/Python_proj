@@ -46,3 +46,13 @@ from inpcheck import integer_check
 * string_check
 * range_check
 * float_check
+
+## orban
+
+```bash
+$ ./orban.py
+```
+
+Nem akarok róla beszélni. - I do not want to talk about it.
+
+Nem akarom elmagyarázni, miért nem akarok róla beszélni. - I don’t want to explain why I don’t want to talk about it.
