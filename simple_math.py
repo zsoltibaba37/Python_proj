@@ -50,8 +50,8 @@ def main():
             print("The result: ", "%.2f"% d)
 
         print("#"*80)
-        time.sleep(1)
-        os.system('cls')
+        time.sleep(3)
+        os.system('cls' if os.name == 'nt' else 'clear')
 
 
 if __name__ == "__main__":
